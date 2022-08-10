@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { Container } from "@mui/material";
 import Searcher from "./components/searcher/index";
 
@@ -14,9 +14,12 @@ const App = () => {
 		alignItems: "center",
 	};
 
+	const [userState, setUserState] = useState("octocat");
+	const [inputUser, setInputUser] = useState("userState");
+
 	return (
 		<Container sx={containerStyle}>
-			<Searcher />
+			<Searcher inputUser={inputUser}  setInputUser={setInputUser} />
 		</Container>
 	);
 };
