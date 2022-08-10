@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import { Container } from "@mui/material";
 import Searcher from "./components/searcher/index";
 import getGitHubUser from "./services/users";
@@ -15,20 +15,36 @@ const App = () => {
 		alignItems: "center",
 	};
 
-	const [userState, setUserState] = useState("JeffUy");
-	const [inputUser, setInputUser] = useState("userState");
+	const [inputUser, setInputUser] = useState("jeffuy");
+	const [userState, setUserState] = useState(inputUser);
+	const [notFound, setNotFound] = useState(false);
 
 	const gettinUser = async (user) => {
-		const userResponse = await getGitHubUser(user)
-		console.log(userResponse)
-	}
+		const userResponse = await getGitHubUser(user);
+
+		if (userState.toLowerCase === "jeffuy") {
+			localStorage.setItem("jeffuy", userResponse);
+		}
+
+		if (userResponse.message === "Not Found") {
+			const { jeffuy } = localStorage;
+			setInputUser(jeffuy);
+			setNotFound(true);
+		} else {
+			setNotFound(false);
+			setUserState(userResponse);
+		}
+
+		console.log(userState);
+	};
+
 	useEffect(() => {
-		gettinUser(userState);
-	})
+		gettinUser(inputUser);
+	}, [inputUser]);
 
 	return (
 		<Container sx={containerStyle}>
-			<Searcher inputUser={inputUser}  setInputUser={setInputUser} />
+			<Searcher inputUser={inputUser} setInputUser={setInputUser} />
 		</Container>
 	);
 };
