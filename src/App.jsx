@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Container } from "@mui/material";
 import Searcher from "./components/searcher/index";
 import getGitHubUser from "./services/users";
+import UserCard from "./containers/UserCard/index";
 
 const App = () => {
 	const containerStyle = {
@@ -16,7 +17,7 @@ const App = () => {
 	};
 
 	const [inputUser, setInputUser] = useState("jeffuy");
-	const [userState, setUserState] = useState(inputUser);
+	const [userState, setUserState] = useState('inputUser');
 	const [notFound, setNotFound] = useState(false);
 
 	const gettinUser = async (user) => {
@@ -45,6 +46,7 @@ const App = () => {
 	return (
 		<Container sx={containerStyle}>
 			<Searcher inputUser={inputUser} setInputUser={setInputUser} />
+			<UserCard userState={userState}/>
 		</Container>
 	);
 };
