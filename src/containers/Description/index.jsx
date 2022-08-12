@@ -9,13 +9,17 @@ const Description = (props) => {
 	const { userState } = props;
 	const { bio } = userState;
 
+	const stackStyle = {
+		justifyContent: "center",
+	}
+
 	return (
 		<React.Fragment>
-			<Stack>
+			<Stack sx={stackStyle}>
 				{bio !== null ? (
-					<Typography variant="h6">{bio}</Typography>
+					<Typography variant="body1">{bio}</Typography>
 				) : (
-					<Typography variant="h6">
+					<Typography variant="body1">
 						No description available
 					</Typography>
 				)}
