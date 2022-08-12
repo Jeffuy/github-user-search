@@ -17,8 +17,6 @@ const LocationInformation = (props) => {
 		marginTop: "15px",
 	};
 
-	const mainStackStyle = {};
-
 	return (
 		<Grid container spacing={2} sx={mainGridStyle}>
 			<Grid item xs={6}>
