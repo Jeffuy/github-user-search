@@ -7,13 +7,17 @@ const PrincipalInformation = (props) => {
 	const { userState } = props;
 	const { name, login, created_at } = userState;
 
+	const stackStyle = {
+		justifyContent: "space-between",
+	}
+
 	return (
 		<React.Fragment>
-			<Stack>
-				<Typography>{name}</Typography>
-				<Typography>{created_at}</Typography>
+			<Stack direction="row" sx={stackStyle}>
+				<Typography variant="h4">{name !== null ? name : login}</Typography>
+				<Typography variant="subtitle2">{created_at}</Typography>
 			</Stack>
-			<Typography>{login}</Typography>
+			<Typography variant="caption">{`@${login}`}</Typography>
 		</React.Fragment>
 	);
 };
