@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from "react";
 import { Stack, Typography } from "@mui/material";
+import PaperInformation from "../../components/PaperInformation";
 
 const Description = (props) => {
 
@@ -18,8 +19,8 @@ const Description = (props) => {
 					</Typography>
 				)}
 			</Stack>
-			{/* <PaperInformation />
-	<LocationInformation /> */}
+			<PaperInformation userState={userState} />
+	{/* <LocationInformation /> */}
 		</React.Fragment>
 	);
 };
