@@ -18,6 +18,7 @@ const App = () => {
 
 	const [inputUser, setInputUser] = useState("jeffuy");
 	const [userState, setUserState] = useState('inputUser');
+	// eslint-disable-next-line no-unused-vars
 	const [notFound, setNotFound] = useState(false);
 
 	const gettinUser = async (user) => {
@@ -36,11 +37,13 @@ const App = () => {
 			setUserState(userResponse);
 		}
 
+		// eslint-disable-next-line no-console
 		console.log(userState);
 	};
 
 	useEffect(() => {
 		gettinUser(inputUser);
+	// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [inputUser]);
 
 	return (
