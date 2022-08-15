@@ -15,6 +15,16 @@ const LocationInformation = (props) => {
 
 	const mainGridStyle = {
 		marginTop: "15px",
+		
+	};
+
+	const secondaryFontSize = {
+		fontSize: {
+			lg: 25,
+			md: 20,
+			sm: 10,
+			xs: 10,
+		},
 	};
 
 	return (
@@ -22,7 +32,7 @@ const LocationInformation = (props) => {
 			<Grid item xs={6}>
 				<Stack direction="row" spacing={2}>
 					<LocationOnIcon />
-					<Typography>
+					<Typography sx={secondaryFontSize}>
 						{location !== null ? location : "No location info"}
 					</Typography>
 				</Stack>
@@ -32,20 +42,20 @@ const LocationInformation = (props) => {
 					<LanguageIcon />
 
 					{blog !== null ? (
-						<Typography>
+						<Typography sx={secondaryFontSize}>
 							<a target="_blank" href={`https://${blog}`} rel="noreferrer">
 								{blog}
 							</a>
 						</Typography>
 					) : (
-						<Typography>No blog info</Typography>
+						<Typography sx={secondaryFontSize}>No blog info</Typography>
 					)}
 				</Stack>
 			</Grid>
 			<Grid item xs={6}>
 				<Stack direction="row" spacing={2}>
 					<TwitterIcon />
-					<Typography>
+					<Typography sx={secondaryFontSize}>
 						{twitter_username !== null
 							? `@${twitter_username}`
 							: "No twitter info"}
@@ -55,7 +65,7 @@ const LocationInformation = (props) => {
 			<Grid item xs={6}>
 				<Stack direction="row" spacing={2}>
 					<BusinessIcon />
-					<Typography>
+					<Typography sx={secondaryFontSize}>
 						{company !== null ? company : "No company info"}
 					</Typography>
 				</Stack>
