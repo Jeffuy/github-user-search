@@ -38,7 +38,7 @@ const LocationInformation = (props) => {
 					</Typography>
 				</Stack>
 			</Grid>
-			<Grid item xs={6} marginTop="15px">
+			<Grid item xs={6}  marginTop="15px">
 				<Stack direction="row" spacing={2}>
 					<LanguageIcon />
 
@@ -53,7 +53,7 @@ const LocationInformation = (props) => {
 					)}
 				</Stack>
 			</Grid>
-			<Grid item xs={6} marginTop="15px" >
+			<Grid item xs={6} >
 				<Stack direction="row" spacing={2}>
 					<TwitterIcon />
 					<Typography sx={secondaryFontSize}>
@@ -63,7 +63,7 @@ const LocationInformation = (props) => {
 					</Typography>
 				</Stack>
 			</Grid>
-			<Grid item xs={6} marginTop="15px">
+			<Grid item xs={6}>
 				<Stack direction="row" spacing={2}>
 					<BusinessIcon />
 					<Typography sx={secondaryFontSize}>
