@@ -9,10 +9,18 @@ const Searcher = (props) => {
 	const stackStyles = {
 		marginTop: "30px",
 		width: "80%",
+
+		"@media (max-width: 600px)": {
+			width: "100%",
+		}
 	};
 
 	const textFieldStyles = {
 		width: "90%",
+
+		"@media (max-width: 600px)": {
+			width: "100%",
+		}
 	};
 
 	const iconButtonStyles = {

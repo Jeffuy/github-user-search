@@ -10,12 +10,14 @@ const UserCard = (props) => {
 
 	const avatarStyle = {
 		width: "100%",
-		height: "auto",
+		height: "min-content",
+		aspectRatio: 1,
 		marginLeft: "5px",
 
 		"@media (max-width: 600px)": {
-			width: "20%",
-			height: "auto",
+			width: "30%",
+			height: "min-content",
+			marginLeft: "0px",
 		}
 	};
 
@@ -25,10 +27,14 @@ const UserCard = (props) => {
 
 	const stackStyle = {
 		margin: "30px",
+
+		"@media (max-width: 600px)": {
+			margin: "0px",
+		}
 	};
 
 	return (<Grid container spacing={2} sx={containerStyle}>
-			<Grid item xs={12}  sm={3} lg={3}>
+			<Grid container item xs={12} sm={3} lg={3} justifyContent="center">
 				<Avatar alt="GitHub User" src={avatarUrl} sx={avatarStyle}/>
 			</Grid>
 		

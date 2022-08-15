@@ -8,12 +8,13 @@ const App = () => {
 	const containerStyle = {
 		background: "whitesmoke",
 		width: "80vw",
-		height: "500px",
+		height: "max-content",
 		borderRadius: "16px",
 		marginTop: "40px",
 		display: "flex",
 		flexDirection: "column",
 		alignItems: "center",
+		overflow: "hidden",
 	};
 
 	const [inputUser, setInputUser] = useState("jeffuy");
