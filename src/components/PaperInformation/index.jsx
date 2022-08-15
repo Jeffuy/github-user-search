@@ -24,9 +24,9 @@ const PaperInformation = (props) => {
 	const secondaryFontSize = {
 		fontSize: {
 			lg: 25,
-			md: 15,
-			sm: 10,
-			xs: 5,
+			md: 20,
+			sm: 15,
+			xs: 15,
 		},
 	};
 
