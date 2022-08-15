@@ -15,6 +15,7 @@ const PrincipalInformation = (props) => {
 			flexDirection: "column",
 			width: "100%",
 			alignItems: "center",
+			textAlign: "center",
 		},
 	};
 

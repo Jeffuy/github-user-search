@@ -17,9 +17,9 @@ const Description = (props) => {
 		<React.Fragment>
 			<Stack sx={stackStyle}>
 				{bio !== null ? (
-					<Typography variant="body1">{bio}</Typography>
+					<Typography variant="body1" textAlign="center">{bio}</Typography>
 				) : (
-					<Typography variant="body1">
+					<Typography variant="body1" textAlign="center">
 						No description available
 					</Typography>
 				)}

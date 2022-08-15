@@ -39,7 +39,7 @@ const UserCard = (props) => {
 				<Avatar alt="GitHub User" src={avatarUrl} sx={avatarStyle} />
 			</Grid>
 
-			<Grid item xs={12} sm={9} lg={9} marginBottom="30px">
+			<Grid item xs={12} sm={9} lg={9}>
 				<Stack direction="column" spacing={1} sx={stackStyle}>
 					<PrincipalInformation userState={userState} />
 					<Description userState={userState} />

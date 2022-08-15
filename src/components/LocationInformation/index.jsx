@@ -25,11 +25,12 @@ const LocationInformation = (props) => {
 			sm: 10,
 			xs: 10,
 		},
+		wrap: "wrap",
 	};
 
 	return (
-		<Grid container spacing={2} sx={mainGridStyle}>
-			<Grid item xs={6}>
+		<Grid container spacing={{ xs: 0, lg: 2}} sx={mainGridStyle}>
+			<Grid item xs={6} marginTop="15px">
 				<Stack direction="row" spacing={2}>
 					<LocationOnIcon />
 					<Typography sx={secondaryFontSize}>
@@ -37,11 +38,11 @@ const LocationInformation = (props) => {
 					</Typography>
 				</Stack>
 			</Grid>
-			<Grid item xs={6}>
+			<Grid item xs={6} marginTop="15px">
 				<Stack direction="row" spacing={2}>
 					<LanguageIcon />
 
-					{blog !== null ? (
+					{blog !== "" ? (
 						<Typography sx={secondaryFontSize}>
 							<a target="_blank" href={`https://${blog}`} rel="noreferrer">
 								{blog}
@@ -52,7 +53,7 @@ const LocationInformation = (props) => {
 					)}
 				</Stack>
 			</Grid>
-			<Grid item xs={6}>
+			<Grid item xs={6} marginTop="15px" >
 				<Stack direction="row" spacing={2}>
 					<TwitterIcon />
 					<Typography sx={secondaryFontSize}>
@@ -62,7 +63,7 @@ const LocationInformation = (props) => {
 					</Typography>
 				</Stack>
 			</Grid>
-			<Grid item xs={6}>
+			<Grid item xs={6} marginTop="15px">
 				<Stack direction="row" spacing={2}>
 					<BusinessIcon />
 					<Typography sx={secondaryFontSize}>
