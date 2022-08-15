@@ -18,7 +18,7 @@ const UserCard = (props) => {
 			width: "30%",
 			height: "min-content",
 			marginLeft: "0px",
-		}
+		},
 	};
 
 	const containerStyle = {
@@ -30,15 +30,16 @@ const UserCard = (props) => {
 
 		"@media (max-width: 600px)": {
 			margin: "0px",
-		}
+		},
 	};
 
-	return (<Grid container spacing={2} sx={containerStyle}>
+	return (
+		<Grid container spacing={2} sx={containerStyle}>
 			<Grid container item xs={12} sm={3} lg={3} justifyContent="center">
-				<Avatar alt="GitHub User" src={avatarUrl} sx={avatarStyle}/>
+				<Avatar alt="GitHub User" src={avatarUrl} sx={avatarStyle} />
 			</Grid>
-		
-		<Grid item xs={12} sm={9} lg={9} >
+
+			<Grid item xs={12} sm={9} lg={9} marginBottom="30px">
 				<Stack direction="column" spacing={1} sx={stackStyle}>
 					<PrincipalInformation userState={userState} />
 					<Description userState={userState} />
